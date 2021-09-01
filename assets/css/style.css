@@ -2,17 +2,63 @@ html {
     min-height: 100vh;
 }
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Zen Tokyo Zoo', sans-serif;
-    margin: 0;
     background: radial-gradient(#96595f, #e4d4d5);
+    margin: 0;
+    cursor: pointer;
 }
 
 .page-title {
-    color: #7c2f37;
-    font-family: 'Zen Tokyo Zoo', sans-serif;
-    text-align: center;
     font-size: 6em;
+    font-family: 'Zen Tokyo Zoo', sans-serif;
+    color: #7c2f37;
+    text-align: center;
     font-weight: normal;
-
+    margin-bottom: 50px;
 }
+
+.game-container {
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(2, 8rem);
+    grid-template-rows: 10rem 2rem 10rem;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.deck {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    font-size: 3rem;
+    font-family: fantasy;
+    color: #7c2f37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border-width: 5px;
+    user-select: none;
+}
+
+.robot-deck {
+    background-color: blanchedalmond;
+}
+
+.challenger-deck {
+    background-color: #7c2f37;
+    color: black;
+}
+
+.result {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
