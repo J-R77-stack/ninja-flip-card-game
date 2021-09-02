@@ -61,4 +61,42 @@ body {
     align-items: center;
 }
 
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    border-width: 5px;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
 
+.card::before,
+.card::after {
+    content: attr(data-value);
+    font-size: 1.5rem;
+    position: absolute;
+}
+
+.card::before {
+    top: .5rem;
+    left: .5rem;
+}
+
+.card::after {
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+}
+
+.card.red {
+    color: red;
+}
+
+.card.black {
+    color: black;
+}
