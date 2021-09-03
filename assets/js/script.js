@@ -12,6 +12,10 @@ class Card {
         this.suit = suit
         this.value = value
     }
+
+    shuffle() {
+        this.cards.sort((a, b) => Math.random() - .5)
+    }
 }
 
 function newDeck() {
@@ -21,5 +25,6 @@ function newDeck() {
         })
     })
 }
+
 
 
